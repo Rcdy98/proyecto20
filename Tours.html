@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tours</title>
+    <meta name="author" content="Diego Silva">
+    <!--Iconos-->
+    <script src="https://kit.fontawesome.com/9be169d39f.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="sBooking.css">
+
+   <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+        }
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #656565;
+            text-align: left;
+            background-color: #F3F3F3;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+            <div class="logo">
+                <img id="imglogo" src="img/LOGOAVION.jpg" alt="logo agencia">
+            </div>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="img/images.png" class="menu-icono" alt="menu">
+            </label> 
+            <nav class="navbar">
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Vuelos.html">Vuelos</a></li>
+                    <li><a href="hoteles.html">Hoteles</a></li>
+                    <li><a href="Tours.html">Tours</a></li>
+                    <li><a href="BlogsForm.html">Blogs</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container-fluid p-0">
+            <div id="header-carousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="w-100" src="img/FONDOTOURS.jpg" alt="Image">
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3" style="max-width: 900px;">
+                                <h1 class="display-3 text-white mb-md-4 header-txt">Encuentra el viaje de tus sueños con<span> Dream Adventures:</span></h1>
+                                <h4 class="text-white text-uppercase mb-md-3">Siempre pensando en sus clientes, ha unido esfuerzos con los operadores 
+                                más reconocidos de la industria turística, para desarrollar paquetes turísticos de óptima calidad, que generen confianza 
+                                en nuestra empresa y que puedan ser disfrutados por nuestros clientes.</h4>
+                            </div>
+                        </div>
+        </div>
+    </header>
+    <section class="informacionhotel">
+        <div class="container-fluid py-5">
+            <div class="container pt-5 pb-3">
+                <div class="text-center mb-3 pb-3">
+                    <h2>PAQUETES TURÍSTICOS</h2>
+                    <p>Estamos en constante negociación con las aerolíneas nacionales e internacionales, para ofrecerles las mejores tarifas disponibles y que puedan complementar su paquete turístico. Esperamos que en esta sección encuentren el viaje de sus sueños y vivan unas maravillosas vacaciones.</p>
+                </div>   
+            </div> 
+    </section>
+    <section class="informacionhotel">
+        <div class="container-fluid py-5">
+            <div class="container pt-5 pb-3">
+                <div class="text-center mb-3 pb-3">
+                    <h2>Los destinos más buscados desde Quito y Guayaquil</h2>
+                </div>   
+            </div> 
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src="img/viajep.jpg" alt="">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Mazatlán, Mx.</small>
+                                <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 noches</small>
+                                <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>1 persona</small>
+                            </div>
+                            <a class="h5 text-decoration-none" href="">Tours desde Quito a Mazatlán, Mx. Alójate en el hotel Riu Emerald Bay 5 </a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>vacaciones</h6>
+                                    <h5 class="m-0">$1250</h5>
+                                </div>
+                                <a href="TourCompra.html" class="btn btn-primary py-md-3 px-md-5 mt-2">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src="img/fondod.jpg" alt="">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Cancún, Mx.</small>
+                                <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>4 noches</small>
+                                <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 personas</small>
+                            </div>
+                            <a class="h5 text-decoration-none" href="">Aquapark, variedad de actividades y mucha diversión.</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>Paquete</h6>
+                                    <h5 class="m-0">$2600</h5>
+                                </div>
+                                <a href="TourCompra.html" class="btn btn-primary py-md-3 px-md-5 mt-2">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src="img/fondot.jpg" alt="">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Riviera Maya, Mx.</small>
+                                <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>4 noches</small>
+                                <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 personas</small>
+                            </div>
+                            <a class="h5 text-decoration-none" href="">Tours desde Quito/Gye a Riviera Maya, Mx.</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>Vacaciones </h6>
+                                    <h5 class="m-0">$2607</h5>
+                                </div>
+                                <a href="TourCompra.html" class="btn btn-primary py-md-3 px-md-5 mt-2">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="informacionhotel">
+        <div class="container-fluid py-5">
+            <div class="container pt-5 pb-3">
+                <div class="text-center mb-3 pb-3">
+                    <h2>Tours más populares</h2>
+                </div>   
+            </div> 
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src="img/viajep.jpg" alt="">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Punta Cana</small>
+                                <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 noches</small>
+                                <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>1 persona</small>
+                            </div>
+                            <a class="h5 text-decoration-none" href="">Hotel Royalton Splash Punta Cana </a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>Caribe</h6>
+                                    <h5 class="m-0">$1255</h5>
+                                </div>
+                                <a href="TourCompra.html" class="btn btn-primary py-md-3 px-md-5 mt-2">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src="img/viajedo.jpg" alt="">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Miami y Orlando</small>
+                                <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>7 noches</small>
+                                <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 personas</small>
+                            </div>
+                            <a class="h5 text-decoration-none" href="">La magia de Seaworld y los diversos parques temáticos en Orlando en este fantástico tour.</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>Diversión</h6>
+                                    <h5 class="m-0">$2600</h5>
+                                </div>
+                                <a href="TourCompra.html" class="btn btn-primary py-md-3 px-md-5 mt-2">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src="img/viajetr.jpg" alt="">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>México</small>
+                                <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>2 noches</small>
+                                <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>1 personas</small>
+                            </div>
+                            <a class="h5 text-decoration-none" href="">Disfruta del encanto de México, una ciudad apasionante para conocer y descubrir toda su riqueza cultural y ancestral, así como su gastronomía y su música que realmente son un tesoro del mundo.</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>Cultura </h6>
+                                    <h5 class="m-0">$2400</h5>
+                                </div>
+                                <a href="TourCompra.html" class="btn btn-primary py-md-3 px-md-5 mt-2">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--
+        <div><h2>Los tours más populares</h2></div>
+
+        <div class="Contenedor">
+            <div class="div4">
+                <h3>Tours a Punta Cana</h3>
+                <div class="ima">
+                    <img id="imagenviajepr" src="img/viajepr.jpg" alt="imagen de Punta Cana">
+                </div>
+                
+                <div class="subcontenedor">
+                    <div class="divi7">
+                        <p><b>Tipo: </b>vacaciones</p>
+                        <p><b>Salidas: </b>Quito y Guayaquil</p>
+                    </div>
+                    <div class="divi8">
+                        <p><b>Desde: </b>$1255</p>
+                        <p><b>Duracion: </b>3 noches</p>
+                    </div>
+                </div>
+                <div class="Descripcion4">
+                    <p>Paquete al Caribe de 3 noches mínimo. Disfruta de una experiencia inolvidable en las mejores playas de Punta Cana y aprovecha el Todo Incluido que te ofrece el Hotel Royalton Splash Punta Cana 4.</p>
+                </div>
+                <div><h4>Paquete incluye</h4></div>
+                <img id="imagenopcion4" src="img/cinco.png" alt="imagenincluyentec">
+                <nav><a href="Paginas/paqueteu.html">Comprar</a></nav>
+            </div>
+
+            <div class="div5">
+                <h3>Tour a Miami y Orlando</h3>
+                <div class="ima">
+                    <img id="imagenfondoR" src="img/viajedo.jpg" alt="imagen de Orlando">
+                </div>
+                
+                <div class="subcontenedor">
+                    <div class="divi9">
+                        <p><b>Tipo: </b>Diversion</p>
+                        <p><b>Salidas: </b>Quito y Guayaquil</p>
+                    </div>
+                    <div class="divi10">
+                        <p><b>Desde: </b>$2600</p>
+                        <p><b>Duracion: </b>7 noches</p>
+                    </div>
+                </div>
+                <div class="Descripcion5">
+                    <p>Disfruta de las compras en Miami, la magia de Seaworld y los diversos parques temáticos en Orlando en este fantástico tour de 7 noches a Miami y Orlando.</p>
+                </div>
+                <div><h4>Paquete incluye</h4></div>
+                <img id="imagenopcion5" src="img/cuatro.png" alt="imagenincluyente">
+                <nav><a href="Paginas/paqueted.html">Comprar</a></nav>
+            </div>
+
+            <div class="div6">
+                <h3>Mexico super económico desde Quito</h3>
+                <div class="ima">
+                    <img id="imagenfondotr" src="img/viajetr.jpg" alt="imagen de Mexico">
+                </div>
+                
+                <div class="subcontenedor">
+                    <div class="divi11">
+                        <p><b>Tipo: </b>Cultural</p>
+                        <p><b>Salidas: </b>Quito y Guayaquil</p>
+                    </div>
+                    <div class="divi12">
+                        <p><b>Desde: </b>$3000</p>
+                        <p><b>Duracion: </b>2 noches</p>
+                    </div>
+                </div>
+                <div class="Descripcion6">
+                    <p>Disfruta del encanto de México, una ciudad apasionante para conocer y descubrir toda su riqueza cultural y ancestral, así como su gastronomía y su música que realmente son un tesoro del mundo.</p>
+                </div>
+                <div><h4>Paquete incluye</h4></div>
+                <img id="imagenopcion6" src="img/tres.png" alt="imagenincluyentet">
+                <nav><a href="Paginas/paquetetr.html">Comprar</a></nav>
+            </div>
+        </div>
+
+        <div><h2>Ofertas Sugeridas</h2></div>
+        
+        <div class="Contenedor">
+            <div class="div7">
+                <h3>Tours a Galapagos Temporada baja</h3>
+                <div class="ima">
+                    <img id="imagenviajegala" src="img/Galpagos.jpg" alt="imagen de Galapagos">
+                </div>
+                
+                <div class="subcontenedor">
+                    <div class="divi13">
+                        <p><b>Tipo: </b>Aventura</p>
+                        <p><b>Salidas: </b><small>Quito y Guayaquil</small></p>
+                    </div>
+                    <div class="divi14">
+                        <p><b>Desde: </b>$1306</p>
+                        <p><b>Duracion: </b><small>4 noches</small></p>
+                    </div>
+                </div>
+                <div class="Descripcion7">
+                    <p>Disfruta de este maravilloso viaje a Galápagos alojándose en el fantástico Lobo de mar o Deja Vú. Sumérgete en el encanto de su naturaleza y descubre un nuevo mundo lleno de conocimiento y diversión.</p>
+                </div>
+                <div><h4>Paquete incluye</h4></div>
+                <img id="imagenopcion7" src="img/cinco.png" alt="imagenincluyentec">
+                <nav><a href="Paginas/paqueteu.html">Comprar</a></nav>
+            </div>
+            
+            <div class="div8">
+                <h3>Hotel Royal Riviera cancun</h3>
+                <div class="ima">
+                    <img id="imagenroyal" src="img/royalhotel.jpg" alt="imagen de Hotelroyal">
+                </div>
+                
+                <div class="subcontenedor">
+                    <div class="divi15">
+                        <p><b>Tipo: </b>Luxury</p>
+                        <p><b>Salidas: </b><small>Quito y Guayaquil</small></p>
+                    </div>
+                    <div class="divi16">
+                        <p><b>Desde: </b>$1090</p>
+                        <p><b>Duracion: </b><small>7 noches</small></p>
+                    </div>
+                </div>
+                <div class="Descripcion8">
+                    <p>Disfruta de todo el Lujo en Cancún en uno de los hoteles más bonitos de la Riviera Maya. En el espectacular Royalton Riviera Cancún podrás deleitarte con un todo incluido pero de lujo con su fantástico programa Royalton All-In Luxury</p>
+                </div>
+                <div><h4>Paquete incluye</h4></div>
+                <img id="imagenopcion8" src="img/cuatro.png" alt="imagenincluyente">
+                <nav><a href="Paginas/paqueted.html">Comprar</a></nav>
+            </div>
+            
+            <div class="div9">
+                <h3>Tours a Madrid desde Quito y Guayaquil</h3>
+                <div class="ima">
+                    <img id="imagenmadri" src="img/madrid.jpg" alt="imagen de Madrid">
+                </div>
+                
+                <div class="subcontenedor">
+                    <div class="divi17">
+                        <p><b>Tipo: </b>Lujo</p>
+                        <p><b>Salidas: </b><small>Quito y Guayaquil</small></p>
+                    </div>
+                    <div class="divi18">
+                        <p><b>Desde: </b>$1973</p>
+                        <p><b>Duracion: </b><small>6 noches</small></p>
+                    </div>
+                </div>
+                <div class="Descripcion9">
+                    <p>El Hotel Riu Plaza España, ubicado en el emblemático Edificio España en la Gran Vía de Madrid, cuenta con 26 plantas con una gran variedad de instalaciones para hacer de tu estancia una experiencia inolvidable.</p>
+                </div>
+                <div><h4>Paquete incluye</h4></div>
+                <img id="imagenopcion9" src="img/tres.png" alt="imagenincluyentet">
+                <nav><a href="Paginas/paquetetr.html">Comprar</a></nav>
+            </div>
+        </div> 
+    </div>-->
+</body>    
+<!--Pie de Pagina-->
+<footer class="pie-pagina">
+    <div class="grupo-1">
+        <div class="box">
+            <figure>
+                <a href="#">
+                    <img src="img/LOGOAVION.jpg" alt="logo de D.A.">
+                </a>
+            </figure>
+        </div>
+        <div class="box">
+            <h2>SOBRE NOSOTROS</h2>
+            <P>En Dream Adventures, somos un equipo de cinco apasionados viajeros y exploradores. 
+               Nuestro objetivo es llevar la emoción y la aventura a cada viaje que emprendas con nosotros. </P>
+        </div>
+        <div class="box">
+            <h2>NUESTROS SERVICIOS</h2>
+            <P>Home</P>
+            <P>Vuelos</P>
+            <P>Hoteles</P>
+            <P>Tours</P>
+            <P>Blogs</P>
+        </div>
+        <div class="box">
+            <h2>SÍGUENOS</h2>
+            <div class="redsocial">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-youtube"></a>
+            </div>
+        </div>
+    </div>
+    <div class="grupo2"> 
+        <small>&copy; 2023 <b>Dream Adventures. Grupo 2 </b> - Todos los Derechos Reservados.</small>
+    </div>
+
+</footer>
+
+</body>
+</html>

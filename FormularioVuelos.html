@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Gudiño Estacio Josue">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Boletín</title>
+    <link rel="stylesheet" href="sBooking.css">
+
+    <style>
+        body{
+        background-color: #7FB3D5;
+        }
+
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="containerFV">
+        <form class="formFV">
+            <h2>Suscríbete!</h2>
+            <p>
+                ¡Suscríbete ahora y prepárate para despegar hacia las mejores ofertas en viajes! 
+                Al unirte a nuestro boletín de vuelos, recibirás acceso exclusivo a ofertas especiales, 
+                descuentos irresistibles y actualizaciones de viajes que te mantendrán siempre un paso adelante.
+            </p>
+
+            <label for="nombre"> Escribe tu nombre</label>
+            <input type="text" id="nombre" class="boxFV">
+
+            <label for="correo">Escribe tu correo</label>
+            <input type="email" id="correo" class="boxFV">
+
+            <label for="actualizacion">Frecuencia de Actualización</label>
+            <select name="" id="" class="boxFV">
+                <option value="">Semanal</option>
+                <option value="">Mensual</option>
+                <option value="">Anual</option>
+                <option value="">Ocasional</option>
+                <option value="">Solo ofertas especiales</option>    
+            </select>
+            
+
+            <label for="mensaje">Escribe tus intereses adicionales</label>
+            <textarea class="boxFV" id="mensaje" cols="30" rows="10"></textarea>
+
+            <div class="TerminosFV" class="boxFV">
+                <input type="checkbox">  Estoy de acuerdo con los Terminos y Condiciones
+            </div>
+            <input type="submit" value="enviar" class="submitFV">
+
+        </form>
+
+        <div class="infoFV">
+            <img src="img/viajevuelos.png" class="img-1FV" alt="">
+            <div class="locationFV">
+                <div class="iconsFV">
+                    <img src="img/gps.jpg" alt="">
+                    <p>200 TEST ECU PC: 5000</p>
+                </div>
+
+                <div class="iconsFV">
+                    <img src="img/number.jpg" alt="">
+                    <p>095647864</p>
+                </div>
+
+                <div class="iconsFV">
+                    <img src="img/email.jpg" alt="">
+                    <p>Dream_adventure@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="socialFV">
+                <img src="img/fa.jpg" alt="">
+                <img src="img/tw.jpg" alt="">
+                <img src="img/ins.jpg" alt="">
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

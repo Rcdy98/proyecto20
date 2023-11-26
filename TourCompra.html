@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago</title>
+    <meta name="author" content="Diego Silva">
+    <!--Fecha-->
+    <script src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="https://kit.fontawesome.com/9be169d39f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+    <!--Iconos-->
+    <link rel="stylesheet" href="sBooking.css">>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Nunito', sans-serif;
+            font-size: 20px;
+        }
+        .header{
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 85px;
+            padding: 5px 10%;
+        }
+        .header .logo{
+            cursor: pointer;
+            margin-right: auto;
+        }
+        .header .logo img{
+            height: 130px;
+            width: auto;
+            transition: all 0.3s;
+        }
+        .header .logo img:hover{
+            transform: scale(1.2);
+        }
+        .header .nav-links{
+            list-style: none;
+        }
+        .header .nav-links li{
+            display: inline-block;
+            padding: 0 20px;
+        }
+        .header .nav-links li:hover{
+            transform: scale(1.1);
+        }
+        .header .nav-links a{
+            color: #305BB7;
+            text-decoration: none;
+        }
+        .header .nav-links li a:hover{
+            color: #3498DB;
+        }
+        .header .btn button:hover{
+            background-color: #3498DB;
+            transform: scale(1.1);
+        }
+
+        .contenedor{
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            background: url(FondoPantalla.jpeg) no-repeat center;
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+        }
+        .Base_contenedor{
+            border: 2px solid #fcfcfc;
+            background: #305BB7;
+            border-radius: 1rem;
+            margin: 0 auto;
+            padding: 15px 15px;
+            display: inline-block;
+        }
+        .Base_contenedor .titulo{
+            text-align: center;
+            color: #fcfcfc;
+        }
+
+        .fechasCotizacion{
+            display: block;
+            padding: 5px;
+        }
+        .fechasCotizacion .secciones-fecha{
+            padding-block: 9px;
+        }
+        .bloque{
+            display: block;
+            padding: 5px;
+        }
+        .bloque .seleccionador{
+            padding-block: 9px;
+        }
+        
+         /* Estilo para la clase "Cantidad" dentro del contenedor de fondo de pantalla */
+        .contenedor .Cantidad{
+            display: block;
+            align-items: center;
+            padding: 10px;
+        }
+         /* Estilo para la clase "cadu" con la clase "info2" */
+         .cadu{
+            padding: 5px;
+        }
+         .cadu .info2{
+            display: inline-flex;
+            padding-block: 5px;
+            gap: 5px;
+            
+        }
+        .title{
+            display: flex;
+            gap: 53%;
+        }
+        /* Estilo para el contenedor de botones */
+        .contenedor-btn{
+            padding: 10px;
+        }
+        /* Estilo para la clase "boton" dentro del contenedor de botones */
+        .contenedor-btn .boton{
+            display: block;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+            background-color: #5bc7ca;
+            border-radius: 10px;
+            padding: 10px 15px;
+            width: 100%;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+        }
+        .contenedor-btn .boton:hover{
+            background: transparent;
+            border: 2px solid #5bc7ca;
+            color: #5bc7ca;
+        }
+    </style>
+
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img id="imglogo" src="img/LOGOAVION.jpg" alt="logo agencia">
+        </div>
+        
+        <nav>
+            <ul class="nav-links">
+                <li><a href="Home.html">Home</a></li>
+                    <li><a href="Vuelos.html">Vuelos</a></li>
+                    <li><a href="hoteles.html">Hoteles</a></li>
+                    <li><a href="Tours.html">Tours</a></li>
+                    <li><a href="BlogsForm.html">Blogs</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="contenedor">
+        <div class="contenedor">
+            <div class="Base_contenedor">
+                
+                <div class="titulo">
+                    <!-- Título del formulario -->
+                    <h3>
+                        <span>
+                            INGRESA LA FECHA Y COTIZA EN LÍNEA
+                        </span>
+                    </h3>
+                </div>
+
+                <form class="fechasCotizacion">
+
+                    <!-- Título de la sección de fechas -->
+                    <div style="color: #fff;">
+                        <h3>Fecha</h3>
+                    </div>
+
+                    <div class="secciones-fecha">
+                        <div>
+                            <!-- Campo de entrada de texto para el rango de fechas -->
+                            <input type="text" name="RangoFecha" value="01/01/2023 - 04/05/2024" style="height: 25px;">
+                            
+                            <script>
+                                // Script para activar el selector de rango de fechas
+                                $(function() {
+                                $('input[name="RangoFecha"]').daterangepicker({
+                                    opens: 'left'
+                                    }, function(start, end, label) {
+                                    console.log("Se hizo una nueva selección de fecha: " + start.format('YYYY-MM-DD') + ' a ' + end.format('YYYY-MM-DD'));
+                                    });
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="bloque">
+                    <div style="color: #fff;">
+                        <h3>Selecionar Hoteles</h3>
+                    </div>
+
+                    <div class="seleccionador">
+                        <select name="categoria" style="height: 25px;">
+                            <!-- Menú desplegable para seleccionar un hotel -->
+                            <option value="">Seleccione el Hotel de su Agrado</option>
+                            <option value="Iberostar Dominicana">Iberostar Dominicana</option>
+                            <option value="Hotel Riu Palace Punta Cana">Hotel Riu Palace Punta Cana</option>
+                        </select>
+                    </div>
+                    
+                </div>
+
+                <div class="bloque">
+                    <div style="color: #fff;">
+                        <h3>Seleccionar Salida</h3>
+                    </div>
+                    <div class="seleccionador">
+                        <select name="Salidas" style="height: 25px;">
+                            <!-- Menú desplegable para seleccionar una salida -->
+                            <option value="">Seleccione la Salida</option>
+                            <option value="Quito (UIO), Aeropuerto Mariscal Sucre (UIO), Ecuador">Quito (UIO), Aeropuerto Mariscal Sucre (UIO), Ecuador</option>
+                            <option value="Guayaquil (GYE), Aeropuerto José Joaquín de Olmedo (GYE), Ecuador">Guayaquil (GYE), Aeropuerto José Joaquín de Olmedo (GYE), Ecuador</option>
+                        </select>
+                    </div>
+                    
+                </div>
+
+                <div class="bloque">
+                    <div style="color: #fff;">
+                        <h3>Cantidad de habitaciones</h3>
+                    </div>
+                    <div class="seleccionador">
+                        <select name="habitaciones" style="width: 47%;">
+                            <!-- Menú desplegable para seleccionar la cantidad de habitaciones -->
+                            <option value="">Seleccione el numero de habitaciones</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                    
+                </div>
+
+                <div>
+                    <!-- Sección de selección de cantidad de adultos y niños -->
+                <div class="bloque">
+                        <div style="color: #fff;">
+                            <h3>Numero de Adultos</h3>
+                        </div>
+                        <div class="seleccionador">
+                        <select name="Adultos" style="width: 25%;">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                        </select>
+                        </div>
+                </div>
+                <div class="bloque">
+                        <div style="color: #fff;">
+                            <h3>Numero de Niños</h3>
+                        </div>
+                    <div class="seleccionador" >
+                        <select name="Niños" style="width: 25%;">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <form>
+                    <div class="bloque">
+                        <div style="color: #fff;">
+                        <h3>Numero de Tarjeta</h3>  
+                        </div>
+                        <div class="seleccionador">
+                            <input type="text" id="Tarjeta" onkeypress='return event.charCode >= 48 && event.charCode <= 57' 
+                            placeholder="0000 0000 0000 0000" maxLength="16" style="height: 25px;">
+                            <script>
+                                function validaNumericos(event) {
+                                // Obtén el carácter introducido en el evento
+                                var char = String.fromCharCode(event.charCode);
+                                // Verifica si el carácter es un número del 0 al 9
+                                if (/^[0-9]$/.test(char)) {
+                                    return true;
+                                }
+                                return false;
+                            }
+                            </script>
+                        </div>
+                        
+                    </div>
+                </form>
+                
+                <div class="cadu">
+                    <div class="title">
+                        <div style="color: #fff;">
+                            <h3>EXP.FECHA</h3>
+                        </div>
+                        <div style="color: #fff;">
+                            <h3>CVC</h3>
+                        </div>
+                    </div>
+                    
+                    
+                    <form class="info2">
+                        <div>
+                            <input type="text" id="Dias" onkeypress='return event.charCode >= 48 && event.charCode <= 57' 
+                            placeholder="DD" maxLength="2" style="height: 25px;">
+                            <script>
+                                function validaNumericos(event) {
+                                // Obtén el carácter introducido en el evento
+                                var char = String.fromCharCode(event.charCode);
+                                // Verifica si el carácter es un número del 0 al 9
+                                if (/^[0-9]$/.test(char)) {
+                                    return true;
+                                }
+                                return false;
+                            }
+                            </script>
+                        </div>
+                        <div>
+                            <input type="text" id="Mes" onkeypress='return event.charCode >= 48 && event.charCode <= 57' 
+                            placeholder="MM" maxLength="2" style="height: 25px;">
+                            <script>
+                                function validaNumericos(event) {
+                                // Obtén el carácter introducido en el evento
+                                var char = String.fromCharCode(event.charCode);
+                                // Verifica si el carácter es un número del 0 al 9
+                                if (/^[0-9]$/.test(char)) {
+                                    return true;
+                                }
+        
+                                return false;
+                            }
+                            </script>
+                        </div>
+
+                        <div>
+                            <input type="text" id="Pin" onkeypress='return event.charCode >= 48 && event.charCode <= 57' 
+                            placeholder="Pin" maxLength="3" style="height: 25px;">
+                            <script>
+                                function validaNumericos(event) {
+                                // Obtén el carácter introducido en el evento
+                                var char = String.fromCharCode(event.charCode);
+                                // Verifica si el carácter es un número del 0 al 9
+                                if (/^[0-9]$/.test(char)) {
+                                    return true;
+                                }
+                                return false;
+                            }
+                            </script>
+                        </div>
+                    </form>
+                    
+                </div>
+            
+                <div class="contenedor-btn">
+                    <button class="boton">Comprar</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="img/LOGOAVION.jpg" alt="logo de D.A.">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h3>SOBRE NOSOTROS</h3>
+                <P>En Dream Adventures, somos un equipo de cinco apasionados viajeros y exploradores. 
+                   Nuestro objetivo es llevar la emoción y la aventura a cada viaje que emprendas con nosotros. </P>
+            </div>
+            <div class="box">
+                <h3>NUESTROS SERVICIOS</h3>
+                <P>Home</P>
+                <P>Vuelos</P>
+                <P>Hoteles</P>
+                <P>Tours</P>
+                <P>Blogs</P>
+            </div>
+            <div class="box">
+                <h3>SIGUENOS</h3>
+                <div class="redsocial">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo2"> 
+            <small>&copy; 2023 <b>Dream Adventures. Grupo 2 </b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+</body>
+</html>

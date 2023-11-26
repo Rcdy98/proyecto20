@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs - Agencia de turismo</title>
+    <meta name="author" content="Bagua Sinaluisa Leidy Andrea">
+    <link rel="stylesheet" href="sBooking.css">
+    <!--Iconos-->
+    <script src="https://kit.fontawesome.com/9be169d39f.js" crossorigin="anonymous"></script> 
+
+    <!-- HOJA DE ESTILO INTERNA -->
+    <style>
+        .container-center h2{
+        text-align: center;
+        color: #21618C;
+        font-size: 2.2em;
+        font-family: "Poppins", sans-serif;;
+        }
+
+        .section.center-content h3 {
+        margin-bottom: 10px;
+        color:#CBAD7B;
+        }
+
+        .rowB h4 {
+        margin-top: 10px;
+        color: #21618C;
+        }
+        
+        .sampleB-text h5{
+        font-size: 22px;
+        font-weight: 600;
+        color: #305BB7;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        margin-bottom: 20px;
+        }
+
+        .sampleB-text h2{
+        font-size: 2.5em;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Diseño de la seccion barra de menu -->
+    <header class="header">
+        <div class="menu container">
+            <div class="logo">
+                <img id="imglogo" src="img/LOGOAVION.jpg" alt="logo agencia">
+            </div>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="img/images.png" class="menu-icono" alt="menu">
+            </label> 
+            <nav class="navbar">
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Vuelos.html">Vuelos</a></li>
+                    <li><a href="hoteles.html">Hoteles</a></li>
+                    <li><a href="Tours.html">Tours</a></li>
+                    <li><a href="BlogsForm.html">Blogs</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container-fluid p-0">
+            <div id="header-carousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="w-100" src="img/fondo-home.png" alt="Image">
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3" style="max-width: 900px;">
+                                <h5>!Bienvenido!</h5>
+                                <h1 class="display-3 text-white mb-md-4 header-txt">Disfruta con<span> Dream Adventures:</span></h1>
+                                <h4 class="text-white text-uppercase mb-md-3">Conoce aquí sobre los mejores destinos
+                                    turísticos del Ecuador.<br>Las Islas Galápagos, Mitad del Mundo. Entre
+                                    muchos mas lugares y opiniones de nuestros clientes que te fascinarán.</h4>
+                                <a href="categorias/clientesblogs.html" class="btn btn-primary py-md-3 px-md-5 mt-2">Recuerdos de nuestros clientes</a>
+                            </div>
+                        </div>
+        </div>
+    </header>
+    <!-- Diseño de sección de contenedor -->
+    <section class="container">
+        <div class="container-center">
+            <h2>LAS MEJORES ANÉCDOTAS DE VIAJES <br> Y CONTENIDO EN NUESTRO BLOG</h2>
+        </div>
+        <div class="section center-content">
+            <h3>Elije una categoría:</h3>
+            <select id="categorySelector">
+                <option value="inicio">Seleccionar</option>
+                <option value="turismo">Turismo</option>
+                <option value="actividades">Actividades</option>
+                <option value="cultura">Tradiciones</option>
+            </select>
+        </div>
+    </section>
+    <!-- diseño de la sección de filas y características -->
+    <section class="featureB">
+        <div class="featureB-content">
+            <div class="rowB">
+                <div class="rowB-img">
+                    <img src="img/fila-1.jpg" alt="Tour de buceos">
+                </div>
+                <h4>Tour <br> de buceos</h4>
+            </div>
+            <div class="rowB">
+                <div class="rowB-img">
+                    <img src="img/fila-2.jpg" alt="Ciclismo">
+                </div>
+                <h4>Ciclismo</h4>
+            </div>
+            <div class="rowB">
+                <div class="rowB-img">
+                    <img src="img/fila-3.jpg" alt="Visitas a  museos">
+                </div>
+                <h4>Visitas <br> a museos</h4>
+            </div>
+            <div class="rowB">
+                <div class="rowB-img">
+                    <img src="img/fila-4.jpg" alt="Observacion de  ballenas">
+                </div>
+                <h4>Avistamiento <br> de ballenas</h4>
+            </div>
+            <div class="rowB">
+                <div class="rowB-img">
+                    <img src="img/fila-5.jpg" alt="Andinismo y Escalada">
+                </div>
+                <h4>Andinismo <br> y Escalada</h4>
+            </div>
+        </div>
+    </section>
+    <!-- Diseño de seccion de muestra -->
+    <section class="sampleB">
+        <div class="sampleB-img">
+            <img src="img/muestra-1.jpg" alt="muestra-1">
+        </div>
+
+        <div class="sampleB-text">
+            <h5>El mejor recuerdo</h5>
+            <h2>QUE TENDRÁS EN TU VIDA</h2>
+            <p>Vive tus sueños y experimenta las mejores
+            escenas que podrias imaginar,aquí en Dream Adventures podrías
+            experimentar la flora, fauna, antiguedades, gastronomía y muchas
+            cosas mas que te encantarán.</p>
+        </div>
+    </section>
+
+    <div class="sampleB2">
+        <div class="sampleB-text sampleB-text2">
+            <h5>Guardando Tesoros en el Tiempo</h5>
+            <h2>EN CADA CAPÍTULO DE TU AVENTURA</h2>
+            <p>Descubre la maravilla de coleccionar momentos
+            inolvidables <br> Explora horizontes nuevos, encuentra la belleza <br> en lo
+            inesperado, y deja que cada día <br> te cuente una historia única
+            llena de emoción, color y vivencias <br> que atesorarás
+            para siempre.</p>
+        </div>
+            <div class="sampleB-img2">
+                <img src="img/muestra-2.jpg" alt="muestra-2">
+            </div>
+        </div>
+
+    <section class="sampleB">
+        <div class="sampleB-img">
+            <img src="img/muestra-3.jpg" alt="muestra-3">
+        </div>
+
+        <div class="sampleB-text">
+            <h5>Explora lo inolvidable</h5>
+            <h2>EN CADA RINCÓN DE TU VIAJE</h2>
+            <p>Sumérgete en una travesía única donde cada momento se convierte
+            en un tesoro. En Dream Adventures, te invitamos a descubrir
+            paisajes impresionantes, culturas fascinantes, delicias culinarias
+            y emocionantes encuentros que te dejarán sin aliento.</p>
+        </div>
+    </section>
+
+    <!--Diseño de seccion de Pie de Pagina-->
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="img/LOGOAVION.jpg" alt="logo de D.A.">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <P>En Dream Adventures, somos un equipo de cinco apasionados viajeros y exploradores. 
+                   Nuestro objetivo es llevar la emoción y la aventura a cada viaje que emprendas con nosotros. </P>
+            </div>
+            <div class="box">
+                <h2>NUESTROS SERVICIOS</h2>
+                <P>Home</P>
+                <P>Vuelos</P>
+                <P>Hoteles</P>
+                <P>Tours</P>
+                <P>Blogs</P>
+            </div>
+            <div class="box">
+                <h2>SIGUENOS</h2>
+                <div class="redsocial">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo2"> 
+            <small>&copy; 2023 <b>Dream Adventures. Grupo 2 </b> - Todos los Derechos Reservados.</small>
+        </div>
+
+    </footer>
+
+    <!-- Script de categorias -->
+    <script>
+        document.getElementById('categorySelector').addEventListener('change', function () {
+            var selectedCategory = this.value;
+        if (selectedCategory !== 'inicio') {
+        window.location.href = 'categorias/' + selectedCategory + '.html';
+    }
+});
+
+    </script>
+
+</body>
+</html>
